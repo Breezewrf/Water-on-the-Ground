@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Potential Risk Recognition Robot</title>
+  <script src="./static/app.js"></script>
+  <script src="./static/sweetalert2.js"></script>
+  <link 
+  rel="stylesheet" 
+  href="./static/bootstrap.min.css"
+>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./static/images/Logo.png" alt="Logo">
+      </a>
+    </div>
+  </nav>
+
+  <audio id="myAudio" preload="auto" autoplay>
+    <source src="./static/sounds/fire-alarm.mp3" type="audio/mpeg">
+  </audio>
+  <div id="myAlertContainer">
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check-circle-fill" width="32" height="32" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+      </symbol>
+      <symbol id="info-fill" width="32" height="32" viewBox="0 0 16 16">
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+      </symbol>
+      <symbol id="exclamation-triangle-fill" width="32" height="32" viewBox="0 0 16 16">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+      </symbol>
+    </svg>
+
+    
+
+    <div class="alert alert-success" role="alert">
+      <div>
+        <div class="col-12 text-center">
+          <h1>地面積水識別機械人</h1>
+        </div>
+        <hr>
+        <div class="col-12 text-center">
+          <h1 class="mb-0" style="display: flex; align-items: center; justify-content: center;">
+            <img id="showIcon" src="./static/images/hand-shake.png" alt="Success Icon" style="width: 48px; height: 48px; margin-right: 10px;">
+            <span id="showText" style="font-size: 48px;">你好!</span>
+          </h1>
+        
+        </div>
+      </div>
+    </div>
+
+
+  <div class="card">
+    <div class="card-body">
+
+      <div class="row">
+    
+        <div class="col-12 text-center">
+
+          <div class="video-container">
+            <img id="video" class="img-fluid" src="{{url_for('video_feed')}}">
+          </div> 
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    
+    <!-- Left -->
+
+    <!-- Right -->
+    <!-- <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://www.lscm.hk/">Logistics and Supply Chain MultiTech R&D Centre</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+</body>
+</html>
