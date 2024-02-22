@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 import time
 model = YOLO('./best.pt')
-DLL_path = "../irDirectSDK/sdk/x64/libirimager.dll"
+
 optris.load_DLL()
 
 # USB connection initialisation 
