@@ -12,7 +12,7 @@ aarch64是指ARM架构的64位指令集架构
 ### Noted!
 > The installation of PyTorch on Jetson is different from normal PC, the GPU supported version can not be installed from pip method directly, you need to fetch wheel file to install that. You can find the wheel file here: https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
 > 
-> With the Jetson version checked above, we need to download **JetPack 4.5 (L4T R32.5.0)** and install it. The default installed torch is only CPU supported. You should note that only supports upto py36.
+> With the Jetson version checked above, we need to download **JetPack 4.5 (L4T R32.5.0)** and install it. The default installed torch is only CPU supported. You should note that only supports upto py36. https://github.com/ultralytics/ultralytics/issues/5019
 >
 > And `nvidia-smi` is not available on Jetson, you can use `jtop` instead.
 
