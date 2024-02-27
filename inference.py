@@ -29,7 +29,13 @@ while True:
         res_img = res.plot()
         im = res_img[..., ::-1]
         # out.write(im)
-        cv2.imshow("Detect", im)
+        if res.probs.top1:
+            frame = cv2.putText(frame, 'Water: %.2f' % (res.probs.top1conf.float()),
+                                (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
+        else:
+            frame = cv2.putText(frame, 'Normal: %.2f' % (res.probs.top1conf.float()),
+                                (20, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2)
+        cv2.imshow("Detect", cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
